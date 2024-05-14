@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    margin: 0;
+    background-color: #2c3e50;
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #34495e;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar h2 {
+    color: #ecf0f1;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #2980b9;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header input {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    grid-auto-rows: minmax(200px, auto);
+}
+
+.kpi {
+    background-color: #34495e;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.kpi h3, .map-container h2, .funds-container h2 {
+    margin-top: 0;
+}
+
+.kpi p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.kpi:nth-child(1), .kpi:nth-child(2), .kpi:nth-child(3) {
+    grid-column: span 2;
+}
+
+.kpi:nth-child(4), .kpi:nth-child(5), .funds-container {
+    grid-column: span 2;
+}
+
+.map-container {
+    grid-column: span 3;
+    background-color: #34495e;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sdg-container {
+    grid-column: span 3;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #34495e;
+    padding: 20px;
+    border-radius: 5px;
+    justify-content: space-around;
+}
+
+.sdg-container .sdg {
+    background-color: #3b5998;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 5px;
+}
+
+.sdg-container .sdg img {
+    width: 100px;
+    height: 100px;
+}
+
+.map-container .map-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.funds-container .funds {
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+}
